@@ -37,7 +37,7 @@ def bubble_sort(matrix,idx1,idx2):
                 matrix[j], matrix[j+1] = matrix[j+1], matrix[j]
     for i in range(len(matrix)):
         for j in range(len(matrix)-1):
-            if matrix[j][idx2] == matrix[j+1][idx2]:
+            if matrix[j][idx1] == matrix[j+1][idx1]:
                 if matrix[j][idx2] > matrix[j+1][idx2]:
                     matrix[j],matrix[j+1] = matrix[j+1], matrix[j]
 
@@ -51,7 +51,7 @@ for tc in range(1, 1+T):
         matrix[idx] = list(map(int, input().split()))
     result1 = solution(matrix)
     # print(result1)
-    bubble_sort(result1,2,1)
+    bubble_sort(result1,2,0)
     # bubble_sort(result1)
     print('#{} {}'.format(tc,len(result1)), end=" ")
     for row in range(len(result1)):

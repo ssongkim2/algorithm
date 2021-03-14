@@ -20,7 +20,7 @@ def BFS(mem_row, mem_col):
     dist = [[-1]*(N) for _ in range(N)]        #미로의 거리를 저장할 리스트
     dist[mem_row][mem_col] = 0
     #선형큐에서의 공백 검사,
-    while front != rear:
+    while front != rear:                             #이러녀 길로만 가는구나
         front += 1
         cur_row, cur_col = Q[front]
         if maze[cur_row][cur_col] == '3':                    #지금 서있는 위치가 문인지
@@ -35,7 +35,7 @@ def BFS(mem_row, mem_col):
             if maze[nr][nc] != '1' and dist[nr][nc] == -1:
                 dist[nr][nc] = dist[cur_row][cur_col] + 1
                 rear += 1
-                Q[rear] = (nr, nc)
+                Q[rear] = (nr, nc)                               #이걸로 길에서 사방탐색
     return 0
 
 
