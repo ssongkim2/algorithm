@@ -10,4 +10,4 @@ def bfs(S,G):
             if visited[i]==False:
                 queue.append(i)
                 visited[i]=True
-                distance[i] = distance[cur]+1                      ㅗ
+                distance[i] = distance[cur]+1
